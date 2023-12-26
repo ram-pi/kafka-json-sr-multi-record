@@ -1,0 +1,53 @@
+{
+  "namespace": "model.avro",
+  "doc": "application messages",
+  "name": "RequestResponse",
+  "type": "record",
+  "fields": [
+    {
+      "name": "requestResponse",
+      "type": [
+        {
+          "name": "Request",
+          "type": "record",
+          "fields": [
+            {
+              "name": "request_id",
+              "type": "int"
+            },
+            {
+              "name": "message_type",
+              "type": "int"
+            },
+            {
+              "name": "users",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "Response",
+          "type": "record",
+          "fields": [
+            {
+              "name": "request_id",
+              "type": "int"
+            },
+            {
+              "name": "response_code",
+              "type": "string"
+            },
+            {
+              "name": "response_count",
+              "type": "int"
+            },
+            {
+              "name": "reason_code",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

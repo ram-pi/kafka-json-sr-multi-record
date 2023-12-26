@@ -23,9 +23,15 @@ mvn clean package
 ## Run
 
 ```
+# RecordNamingStrategy
 java -cp target/kafka-json-sr-multi-record-1.0-SNAPSHOT.jar kafka.client.CloudUserProducer
 java -cp target/kafka-json-sr-multi-record-1.0-SNAPSHOT.jar kafka.client.PlatformUserProducer
 java -cp target/kafka-json-sr-multi-record-1.0-SNAPSHOT.jar kafka.client.UserConsumer
+# TopicNamingStrategy with one container object
+java -cp target/kafka-json-sr-multi-record-1.0-SNAPSHOT.jar kafka.client.CombinedRequestResponseProducer
+java -cp target/kafka-json-sr-multi-record-1.0-SNAPSHOT.jar kafka.client.GenericCombinedRequestResponseConsumer
+java -cp target/kafka-json-sr-multi-record-1.0-SNAPSHOT.jar kafka.client.SpecificCombinedRequestResponseConsumer
+
 ```
 
 ## Command Line Utils
